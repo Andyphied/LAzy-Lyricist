@@ -14,7 +14,7 @@ if not MONGO_URL:
 
 
 app = Flask(__name__)
-app.debug = False
+app.debug = True
 app.secret_key = os.environ.get('SECRET_KEY')
 app.config['MONGO_URI'] = MONGO_URL
 

@@ -7,7 +7,7 @@ from .error import error_message
 
 
 
-API_KEY = '5715aanYjkFAIHEUsVd4zQtsTVsSCc63HXPuptrimsZ6aCaXQ5U5AuqV'
+API_KEY = os.environ.get('API_KEY')
 headers = {
         'Content-Type': 'application/json',
         'x-happi-key': API_KEY,
