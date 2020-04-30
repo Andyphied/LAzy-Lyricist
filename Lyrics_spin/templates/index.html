@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Lazy Lyricist</title>
+    <meta charset="UTF-8"/> 
+    <link rel='icon' href="{{ url_for('static', filename='favicon.ico') }}" type='image/x-icon'/ >
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    
+    
+    
+    
+
+</head>
+<body>
+    <nav class= "blue lighten-1">
+        
+        <div class="container nav-wrapper">
+            <a href="/" class="brand-logo left"><i class="large material-icons" style="color: purple darken-4">shuffle</i>
+            Lazy Lyricist
+            </a>
+            <ul id="nav-mobile" class="right">
+                <li>
+                    <a href="http://www.github.com/andyphied"><i class="fab fa-github"></i>Andyphied</a>
+                </li>
+                <li>
+                    <a href="http://twitter.com/Andy_phied?s=08"><i class="fab fa-twitter"></i>Andy_Phied</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <h1 style="text-align: center"> Let's Generate Lyrics For your Lazy Ass!</h1>
+        <div class="row">
+            <div class="col s4">
+                <!-- Promo Content 1 goes here -->
+                <div class="center">
+                    <i class="large material-icons" style="color: #2962ff">cloud</i>
+                    <p>Large Database of Artists and Albums</p>
+                    <p class="light center">Even Flash aint got Nothing on This.</p>
+                </div>
+            </div>
+
+            <div class="col s4">
+                <!-- Promo Content 2 goes here -->
+                <div class="center">
+                    <i class="large material-icons" style="color: orange">layers</i>
+                    <p>Simple Layout</p>
+                    <p class="light center">Nothing Advanced Just Generate Away.</p>
+                </div>
+            </div>
+
+            <div class="col s4">
+                <!-- Promo Content 3 goes here -->
+                <div class="center">
+                    <i class="large material-icons" style="color: #b71c1c">shuffle</i>
+                    <p>Unique Output Everytime</p>
+                    <p class="light center">I built this with ❤️</p>
+                </div>
+            </div>
+        </div>
+
+        {% block content %}
+
+        <div class="row center">
+            <form method= "POST" action="/lyrics" class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix" style="color: #42a5f5">face</i>
+                        {{ form.artist }}
+                        {{ form.artist.label }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix" style="color: #42a5f5">album</i>
+                        {{ form.album }}
+                        {{ form.album.label }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix" style="color: #42a5f5">view_headline</i>
+                        {{ form.lines }}
+                        {{ form.lines.label }} 
+                    </div>
+                </div>
+                <a class="waves-effect waves-light btn">
+                    <i class="material-icons right" style="color: black">loop</i>
+                    {{form.submit}}
+                </a>
+            </form>
+        </div>
+
+        
+
+        {% endblock content %}
+    
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://kit.fontawesome.com/b808204a8e.js" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
