@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn Lyrics_spin:app
