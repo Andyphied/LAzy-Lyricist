@@ -1,1 +1,1 @@
-web: gunicorn Lyrics_spin/app.py
+web: gunicorn Lyrics_spin.app
