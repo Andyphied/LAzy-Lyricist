@@ -3,8 +3,8 @@ from flask import Flask, url_for, redirect, request, render_template
 from flask_pymongo import PyMongo
 
 from .form import Lyrics_info 
-from resources.engine import engine
-from resources.script import get_lyrics_text
+from .engine import engine
+from .script import get_lyrics_text
 
 
 
