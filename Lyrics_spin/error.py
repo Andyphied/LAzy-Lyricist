@@ -6,17 +6,18 @@ def error_message(code=1):
         return message
 
     if code >= 500:
-        message= ('[!] [{0}] Server Error'.format(code))
+        message= ['[!] [{0}] Server Error'.format(code)]
         return message
 
     elif code == 401:
-        message= ('[!] [{0}] Authentication Failed'.format(code))
+        message= ['[!] [{0}] Authentication Failed'.format(code)]
         return message
+
     elif code >= 400:
-        message= ('[!] [{0}] Bad Request'.format(code))
+        message= ['[!] [{0}] Bad Request'.format(code)]
         #message= (ssh_key )
         #message= (response.content )
         return message
     elif code >= 300:
-        message= ('[!] [{0}] Unexpected redirect.'.format(code))
+        message= ['[!] [{0}] Unexpected redirect.'.format(code)]
         return message
