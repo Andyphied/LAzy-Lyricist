@@ -129,7 +129,7 @@ def compile_lyrics(track, artist):
                     lyrics = -1
                     return lyrics
 
-            else:
+            elif response['error']:
                 lyrics = -1
                 return lyrics
             
