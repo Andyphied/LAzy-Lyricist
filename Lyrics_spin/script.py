@@ -128,6 +128,9 @@ def compile_lyrics(track, artist):
                 else:
                     lyrics = -1
                     return lyrics
+            else:
+                lyrics = -1
+                return lyrics
 
         else:
             lyrics = -1
